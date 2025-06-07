@@ -6,7 +6,7 @@
 
 ## 环境安装
 
-依赖于[PyTorch](https://pytorch.org/)、[MMCV](https://github.com/open-mmlab/mmcv)和[mmrotate]([https://github.com/open-mmlab/mmdetection](https://github.com/open-mmlab/mmrotate))。
+依赖于[PyTorch](https://pytorch.org/)、[MMCV](https://github.com/open-mmlab/mmcv)和[mmrotate](https://github.com/open-mmlab/mmdetection](https://github.com/open-mmlab/mmrotate)。
 以下是快速安装步骤：
 
 ```shell
