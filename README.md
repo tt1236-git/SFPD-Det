@@ -1,6 +1,7 @@
-## 简介
+## Spatial Focusing and Progressive Decoupling Detector for High-Aspect-Ratio Rotated Objects
 
 本项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
+
 
 
 ## 环境安装
