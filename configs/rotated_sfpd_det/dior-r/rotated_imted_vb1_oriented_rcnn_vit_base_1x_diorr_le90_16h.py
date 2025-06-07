@@ -2,9 +2,9 @@
 device = 'cuda'
 
 _base_ = [
-    '../../../_base_/datasets/diorr.py',
-    '../../../_base_/schedules/schedule_1x.py',
-    '../../../_base_/default_runtime.py'
+    '../../_base_/datasets/diorr.py',
+    '../../_base_/schedules/schedule_1x.py',
+    '../../_base_/default_runtime.py'
 ]
 
 pretrained = 'data/pretrained/mae_pretrain_vit_base_full.pth'
