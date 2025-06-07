@@ -87,7 +87,7 @@ data/
 │       ├── annfiles
 │       └── images
 └── split_ss_diorr
-    ├── val
+    └── val
         ├── annfiles
         └── images
 
