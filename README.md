@@ -1,1 +1,147 @@
-# SFPD-Det
+<div align="center">
+  <img src="resources/mmrotate-logo.png" width="450"/>
+  <div>&nbsp;</div>
+  <div align="center">
+    <b><font size="5">DIOR-R Rotated Object Detection</font></b>
+  </div>
+  <div>&nbsp;</div>
+
+[![PyPI](https://img.shields.io/pypi/v/mmrotate)](https://pypi.org/project/mmrotate)
+[![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmrotate.readthedocs.io/en/latest/)
+[![license](https://img.shields.io/github/license/open-mmlab/mmrotate.svg)](https://github.com/open-mmlab/mmrotate/blob/main/LICENSE)
+
+</div>
+
+## 简介
+
+本项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
+
+## 主要特性
+
+- **支持多种角度表示**
+
+  本项目提供了多种主流的角度表示方法，以满足不同的论文设置。
+
+- **模块化设计**
+
+  我们将旋转目标检测框架分解为不同的组件，使得通过组合不同模块来构建新模型变得更加容易和灵活。
+
+- **强大的基线和最先进的方法**
+
+  本项目提供了旋转目标检测中的强大基线和最先进的方法。
+
+## 环境安装
+
+本项目依赖于[PyTorch](https://pytorch.org/)、[MMCV](https://github.com/open-mmlab/mmcv)和[MMDetection](https://github.com/open-mmlab/mmdetection)。
+以下是快速安装步骤：
+
+```shell
+conda create -n open-mmlab python=3.7 pytorch==1.7.0 cudatoolkit=10.1 torchvision -c pytorch -y
+conda activate open-mmlab
+pip install openmim
+mim install mmcv-full
+mim install mmdet
+git clone https://github.com/your-username/diorr-detection.git
+cd diorr-detection
+pip install -r requirements/build.txt
+pip install -v -e .
+```
+
+## 数据准备
+
+### DIOR-R数据集
+
+DIOR-R数据集是一个用于旋转目标检测的遥感图像数据集，包含20个类别：
+
+```
+'airplane', 'airport', 'baseballfield', 'basketballcourt', 'bridge', 
+'chimney', 'expressway-service-area', 'expressway-toll-station', 
+'dam', 'golffield', 'groundtrackfield', 'harbor', 'overpass', 
+'ship', 'stadium', 'storagetank', 'tenniscourt', 'trainstation', 
+'vehicle', 'windmill'
+```
+
+### 数据集下载
+
+您可以从以下链接下载DIOR-R数据集：
+[DIOR-R数据集下载链接](https://your-dataset-link.com)
+
+### 数据集准备
+
+1. 下载DIOR-R数据集并解压到`data/`目录下
+2. 执行数据预处理脚本：
+
+```shell
+python tools/data/diorr/split_diorr.py
+```
+
+处理后的数据集结构应如下：
+
+```
+data/
+├── split_ms_diorr
+│   ├── trainval
+│   │   ├── annfiles
+│   │   └── images
+│   ├── val
+│   │   ├── annfiles
+│   │   └── images
+│   └── test
+│       ├── annfiles
+│       └── images
+└── split_ss_diorr
+    ├── trainval
+    │   ├── annfiles
+    │   └── images
+    ├── val
+    │   ├── annfiles
+    │   └── images
+    └── test
+        ├── annfiles
+        └── images
+```
+
+## 模型训练
+
+### 训练命令
+
+```shell
+python ./tools/train.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v.py
+```
+
+### 测试命令
+
+```shell
+python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v/epoch_12.pth --eval mAP
+```
+
+## 预训练模型
+
+您可以从以下链接下载预训练模型：
+[预训练模型下载链接](https://your-model-link.com)
+
+## 引用
+
+如果您在研究中使用了本项目，请引用以下论文：
+
+```bibtex
+@inproceedings{your-paper,
+  title   = {Your Paper Title},
+  author  = {Your Name},
+  booktitle={Proceedings of the Conference},
+  year={2023}
+}
+
+@inproceedings{zhou2022mmrotate,
+  title   = {MMRotate: A Rotated Object Detection Benchmark using PyTorch},
+  author  = {Zhou, Yue and Yang, Xue and Zhang, Gefan and Wang, Jiabao and Liu, Yanyi and
+             Hou, Liping and Jiang, Xue and Liu, Xingzhao and Yan, Junchi and Lyu, Chengqi and
+             Zhang, Wenwei and Chen, Kai},
+  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
+  year={2022}
+}
+```
+
+## 许可证
+
+本项目采用[Apache 2.0 license](LICENSE)许可证。
