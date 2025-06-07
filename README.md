@@ -1,12 +1,12 @@
 # Spatial Focusing and Progressive Decoupling Detector for High-Aspect-Ratio Rotated Objects
 
-本项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
+项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
 
 
 
 ## 环境安装
 
-本项目依赖于[PyTorch](https://pytorch.org/)、[MMCV](https://github.com/open-mmlab/mmcv)和[MMDetection](https://github.com/open-mmlab/mmdetection)。
+依赖于[PyTorch](https://pytorch.org/)、[MMCV](https://github.com/open-mmlab/mmcv)和[MMDetection](https://github.com/open-mmlab/mmdetection)。
 以下是快速安装步骤：
 
 ```shell
@@ -38,7 +38,7 @@ DIOR-R数据集是一个用于旋转目标检测的遥感图像数据集，包�
 ### 数据集下载
 
 您可以从以下链接下载DIOR-R数据集：
-[DIOR-R数据集下载链接](https://your-dataset-link.com)
+[DIOR-R数据集下载链接](https://pan.baidu.com/s/104I7pegeWrdeKCguCpntCQ?pwd=1234)
 
 ### 数据集准备
 
@@ -78,7 +78,7 @@ python ./tools/train.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_ori
 ### 测试命令
 
 ```shell
-python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_xyawh321v.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v/xxx.pth --eval mAP
+python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_xyawh321v.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_xyawh321v/xxx.pth --eval mAP
 ```
 
 ## 预训练模型
