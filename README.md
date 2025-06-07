@@ -96,7 +96,7 @@ python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_orie
 ## 预训练模型
 
 您可以从以下链接下载预训练模型：
-[预训练模型下载链接](https://your-model-link.com)
+[预训练模型下载链接](https://pan.baidu.com/s/1pisK3HUCCZkVOFJLYlVYGg?pwd=1234)
 
 ## 引用
 
