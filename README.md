@@ -1,17 +1,3 @@
-<div align="center">
-  <img src="resources/mmrotate-logo.png" width="450"/>
-  <div>&nbsp;</div>
-  <div align="center">
-    <b><font size="5">DIOR-R Rotated Object Detection</font></b>
-  </div>
-  <div>&nbsp;</div>
-
-[![PyPI](https://img.shields.io/pypi/v/mmrotate)](https://pypi.org/project/mmrotate)
-[![docs](https://img.shields.io/badge/docs-latest-blue)](https://mmrotate.readthedocs.io/en/latest/)
-[![license](https://img.shields.io/github/license/open-mmlab/mmrotate.svg)](https://github.com/open-mmlab/mmrotate/blob/main/LICENSE)
-
-</div>
-
 ## 简介
 
 本项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
