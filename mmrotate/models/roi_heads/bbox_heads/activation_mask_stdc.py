@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-
 from .delta2theta import delta2theta
+from .layer_reg_with_strip_conv import LayerRegWithStripConv  # 新增：导入带条形卷积的LayerReg
 
 
 class LayerReg(nn.Module):
@@ -235,7 +235,8 @@ class BlockSTDC(nn.Module):
         self.need_layer_reg = ((len(self.dc_mode_str) != 0) or (len(self.am_mode_str) != 0 and lack_xy_o_wh_o_a))
 
         if self.need_layer_reg:
-            self.layer_reg = LayerReg(in_channels=dim, out_channels=5, num_convs=num_convs)
+            # 修改：使用带条形卷积的LayerReg版本
+            self.layer_reg = LayerRegWithStripConv(in_channels=dim, out_channels=5, num_convs=num_convs)
         else:
             pass
 
@@ -308,4 +309,3 @@ class BlockSTDC(nn.Module):
             x = x + self.drop_path(self.gamma_1 * y)
             x = x + self.drop_path(self.gamma_2 * self.mlp(self.norm2(x)))
         return x, bbox_pr
-
