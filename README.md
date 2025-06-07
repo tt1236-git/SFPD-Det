@@ -6,7 +6,7 @@
 
 - **支持多种角度表示**
 
-  本项目提供了多种主流的角度表示方法，以满足不同的论文设置。
+  本项目提供了多种主流的角度表示方法，以满足不同的论文设
 
 - **模块化设计**
 
@@ -90,7 +90,7 @@ python ./tools/train.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_ori
 ### 测试命令
 
 ```shell
-python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v/epoch_12.pth --eval mAP
+python ./tools/test.py ./configs/rotated_sfpd_det/dior-r/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_stdc_xyawh321v/xxx.pth --eval mAP
 ```
 
 ## 预训练模型
