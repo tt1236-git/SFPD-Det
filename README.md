@@ -83,22 +83,14 @@ data/
 │   ├── trainval
 │   │   ├── annfiles
 │   │   └── images
-│   ├── val
-│   │   ├── annfiles
-│   │   └── images
 │   └── test
 │       ├── annfiles
 │       └── images
 └── split_ss_diorr
-    ├── trainval
-    │   ├── annfiles
-    │   └── images
     ├── val
-    │   ├── annfiles
-    │   └── images
-    └── test
         ├── annfiles
         └── images
+
 ```
 
 ## 模型训练
