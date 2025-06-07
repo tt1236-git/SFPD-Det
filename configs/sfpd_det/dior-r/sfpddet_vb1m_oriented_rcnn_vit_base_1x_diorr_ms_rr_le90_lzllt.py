@@ -1,4 +1,4 @@
-_base_ = './rotated_imted_vb1_oriented_rcnn_vit_base_1x_diorr_le90_16h.py'
+_base_ = './spfddet_vb1_oriented_rcnn_vit_base_1x_diorr_le90_16h.py'
 
 model = dict(
     backbone=dict(
