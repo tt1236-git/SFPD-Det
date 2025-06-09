@@ -78,7 +78,7 @@ python ./tools/train.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit
 ### 测试命令
 
 ```shell
-python ./tools/test.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_xyawh321v/xxx.pth --eval mAP
+python ./tools/test.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt.py ./work_dirs/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt/xxx.pth --eval mAP
 ```
 
 ## 预训练模型
