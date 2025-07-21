@@ -1,8 +1,8 @@
 # Spatial Focusing and Progressive Decoupling Detector for High-Aspect-Ratio Rotated Objects
 
-项目基于MMRotate框架，实现了针对DIOR-R数据集的旋转目标检测。DIOR-R数据集包含20个类别的旋转目标，是遥感图像旋转目标检测的重要基准数据集。
+## Abstract
 
-
+In recent years, remote sensing object detection has witnessed significant advancements through deep explorations of convolutional neural networks (CNNs) and vision transformer (ViT) architectures. However, detecting rotated objects with high aspect ratios remains challenging. Current detection frameworks inadequately address the anisotropic feature distribution caused by such objects: feature information is highly concentrated in one spatial dimension while being sparse in another; and there are significant feature differences in the parameters representing the bounding box. To address this issue, we propose a Spatial Focusing and Progressive Decoupling Detector (SFPD-Det), which consists of three components: the Spatially Crosswise Convolution Module (SCCM), Hierarchical Decoupling Network (HDN), and Dynamic Progressive Activation Masks (DPMs). The SCCM captures diverse spatial features with long-range dependencies by combining square convolutions with multi-branch orthogonal large strip convolutions, enhancing the model adaptability to objects with varying aspect ratios. The HDN is composed of stacked ViT blocks and uses separate network branches to predict the position, angle, and size of bounding boxes in a cascaded manner. Furthermore, by combining the predicted parameters, we propose DPMs that embed the mask information of potential object boundary regions into the HDN, which progressively guide the self-attention to enhance cirtical features within the region of interest, thereby achieving precise bounding box regression. Extensive experiments on three benchmark remote sensing datasets (DOTA, HRSC2016, and UCAS-AOD) demonstrate that our SFPD-Det achieves state-of-the-art performance, validating the effectiveness of the proposed approach.
 
 ## 环境安装
 
@@ -78,7 +78,7 @@ python ./tools/train.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit
 ### 测试命令
 
 ```shell
-python ./tools/test.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt.py ./work_dirs/rotated_imted_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_xyawh321v/xxx.pth --eval mAP
+python ./tools/test.py ./configs/sfpd_det/dior-r/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt.py ./work_dirs/sfpddet_vb1m_oriented_rcnn_vit_base_1x_diorr_ms_rr_le90_lzllt/xxx.pth --eval mAP
 ```
 
 ## 预训练模型
