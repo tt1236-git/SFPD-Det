@@ -1,6 +1,6 @@
 # Spatial Focusing and Progressive Decoupling Detector for High-Aspect-Ratio Rotated Objects
 
-! [] (https://github.com/tt1236-git/SFPD-Det/raw/main/Figures/Architecture.png)
+! [] (https://github.com/tt1236-git/SFPD-Det/blob/main/Figures/Arthitecture.png)
 
 
 ## Abstract
